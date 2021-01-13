@@ -1,0 +1,45 @@
+{
+  "name": "reviews-package",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon server/index.js",
+    "dev:react": "webpack --config ./webpack.config.js --mode development -w",
+    "db:setup": "node database-mongodb/seed.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Destination-Capstone/Reviews.git"
+  },
+  "author": "Malcolm Marshall",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Destination-Capstone/Reviews/issues"
+  },
+  "homepage": "https://github.com/Destination-Capstone/Reviews#readme",
+  "devDependencies": {
+    "@babel/core": "^7.12.10",
+    "@babel/plugin-transform-runtime": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
+    "@babel/preset-react": "^7.12.10",
+    "babel-loader": "^8.2.2",
+    "nodemon": "^2.0.6",
+    "webpack": "^4.44.2",
+    "webpack-cli": "^4.3.0"
+  },
+  "dependencies": {
+    "angular": "^1.8.2",
+    "axios": "^0.21.1",
+    "bootstrap": "^3.3.7",
+    "express": "^4.17.1",
+    "jquery": "^3.5.1",
+    "moment": "^2.29.1",
+    "mongoose": "^5.11.9",
+    "mysql": "^2.18.1",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0",
+    "underscore": "^1.12.0"
+  }
+}
