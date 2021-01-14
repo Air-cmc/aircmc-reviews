@@ -3,7 +3,7 @@ const path = require('path');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 
-const { Reviews, Ratings } = require('../database/Review.js');
+const { Review, Rating } = require('../database/Review.js');
 
 const app = express();
 const PORT = 3000;
@@ -14,8 +14,16 @@ app.use(cors());
 
 app.use(express.static(path.join(__dirname + '/../client/dist')));
 
-app.get('/reviews', (req, res) => {
-  res.send('From server');
+app.get('/review', (req, res) => {
+  Review.find({})
+    .then(data => res.send(data))
+    .catch(err => console.log(err));
+});
+
+app.get('/rating', (req, res) => {
+  Rating.find({})
+    .then(data => res.send(data))
+    .catch(err => console.log(err));
 });
 
 app.post('/reviews', (req, res) => {
