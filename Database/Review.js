@@ -13,6 +13,14 @@ const ratingSchema = new mongoose.Schema({
     four: {type: Number, default: 0},
     five: {type: Number, default: 0}
   },
+  starOptions: {
+    cleanliness: Number,
+    communication: Number,
+    checkIn: Number,
+    accuracy: Number,
+    Location: Number,
+    value: Number
+  },
   options: {
     comfortableBeds: {type: Number, default: 0},
     responsiveHost: {type: Number, default: 0},

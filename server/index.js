@@ -20,15 +20,21 @@ app.get('/review', (req, res) => {
     .catch(err => console.log(err));
 });
 
-app.get('/rating', (req, res) => {
+// app.get('/review/:host', (req, res) => {
+//   Review.find({host: req.params.host})
+//     .then(data => res.send(data))
+//     .catch(err => console.log(err));
+// });
+
+app.get('/rating/', (req, res) => {
   Rating.find({})
     .then(data => res.send(data))
     .catch(err => console.log(err));
 });
 
-app.post('/reviews', (req, res) => {
+// app.post('/reviews', (req, res) => {
 
-});
+// });
 
 
 

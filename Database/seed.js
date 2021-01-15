@@ -12,6 +12,14 @@ const sampleRating = [
       four: 4,
       five: 5
     },
+    starOptions: {
+      cleanliness: 4,
+      communication: 3,
+      checkIn: 2,
+      accuracy: 5,
+      Location: 5,
+      value: 5
+    },
     options: {
       comfortableBeds: 3,
       responsiveHost: 4,
@@ -207,34 +215,6 @@ const sampleReview = [
     review: {
       name: 'Patrick ',
       body: 'What a lovely host and amazing home! His response time was very fast, what a quick typer!'
-    }
-  },
-  {
-    host: 'Jon Lasley',
-    review: {
-      name: 'Hannah ',
-      body: 'Jon was so friendly and responsive!'
-    }
-  },
-  {
-    host: 'Amanda DeVille',
-    review: {
-      name: 'Cruella',
-      body: 'Not enough closet space for my furs.'
-    }
-  },
-  {
-    host: 'Amanda DeVille',
-    review: {
-      name: 'Tom',
-      body: 'Great location and host! I would have stayed for another week, but figured I need to get home and back to work on my website.'
-    }
-  },
-  {
-    host: 'Joe Docker',
-    review: {
-      name: 'Mystery ',
-      body: 'Mystery Man with a Mystery review'
     }
   },
 ];
