@@ -8,6 +8,14 @@ const sample = [
       four: 4,
       five: 5
     },
+    starOptions: {
+      cleanliness: 4,
+      communication: 3,
+      checkIn: 2,
+      accuracy: 5,
+      Location: 5,
+      value: 5
+    },
     options: {
       comfortableBeds: 3,
       responsiveHost: 4,

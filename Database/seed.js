@@ -39,6 +39,14 @@ const sampleRating = [
       four: 5,
       five: 6
     },
+    starOptions: {
+      cleanliness: 4,
+      communication: 3,
+      checkIn: 2,
+      accuracy: 5,
+      Location: 5,
+      value: 5
+    },
     options: {
       comfortableBeds: 4,
       responsiveHost: 5,
@@ -57,6 +65,14 @@ const sampleRating = [
       three: 3,
       four: 2,
       five: 0
+    },
+    starOptions: {
+      cleanliness: 4,
+      communication: 3,
+      checkIn: 2,
+      accuracy: 5,
+      Location: 5,
+      value: 5
     },
     options: {
       comfortableBeds: 0,
@@ -77,6 +93,14 @@ const sampleRating = [
       four: 2,
       five: 5
     },
+    starOptions: {
+      cleanliness: 4,
+      communication: 3,
+      checkIn: 2,
+      accuracy: 5,
+      Location: 5,
+      value: 5
+    },
     options: {
       comfortableBeds: 2,
       responsiveHost: 6,
@@ -95,6 +119,14 @@ const sampleRating = [
       three: 3,
       four: 5,
       five: 15
+    },
+    starOptions: {
+      cleanliness: 4,
+      communication: 3,
+      checkIn: 2,
+      accuracy: 5,
+      Location: 5,
+      value: 5
     },
     options: {
       comfortableBeds: 8,
@@ -115,6 +147,14 @@ const sampleRating = [
       four: 8,
       five: 15
     },
+    starOptions: {
+      cleanliness: 4,
+      communication: 3,
+      checkIn: 2,
+      accuracy: 5,
+      Location: 5,
+      value: 5
+    },
     options: {
       comfortableBeds: 3,
       responsiveHost: 6,
@@ -133,6 +173,14 @@ const sampleRating = [
       three: 5,
       four: 3,
       five: 10
+    },
+    starOptions: {
+      cleanliness: 4,
+      communication: 3,
+      checkIn: 2,
+      accuracy: 5,
+      Location: 5,
+      value: 5
     },
     options: {
       comfortableBeds: 4,

@@ -1,11 +1,13 @@
 import React from 'react';
 import { Row, Col } from 'react-bootstrap';
 import StarRating from 'react-bootstrap-star-rating';
+import { Card } from 'react-bootstrap';
 
 
 const StarReview = (props) => {
 
   const stars = props.stars.starReview;
+  console.log('star', props);
 
   return (
     <div>
@@ -15,7 +17,12 @@ const StarReview = (props) => {
       <Col>{'Three: '}{stars.three}</Col>
       <Col>{'Four: '}{stars.four}</Col>
       <Col>{'Five: '}{stars.five}</Col>
+
+      <Card>
+
+      </Card>
     </div>
+
   );
 };
 

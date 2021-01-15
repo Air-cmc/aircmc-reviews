@@ -5,6 +5,7 @@ import { Card } from 'react-bootstrap';
 const Review = (props) => {
   console.log('reveiw', props);
 
+
   return (
     <div className="card-container">
       {props.reviews.map((review, index) => {
