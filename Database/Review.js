@@ -7,19 +7,19 @@ console.log('Mongo Connection: ', mongoose.connection.readyState);
 const ratingSchema = new mongoose.Schema({
   hostName: String,
   starReview: {
-    one: {type: Number, default: 0},
-    two: {type: Number, default: 0},
-    three: {type: Number, default: 0},
-    four: {type: Number, default: 0},
-    five: {type: Number, default: 0}
+    1: {type: Number, default: 0},
+    2: {type: Number, default: 0},
+    3: {type: Number, default: 0},
+    4: {type: Number, default: 0},
+    5: {type: Number, default: 0}
   },
   starOptions: {
-    cleanliness: Number,
-    communication: Number,
-    checkIn: Number,
-    accuracy: Number,
+    Cleanliness: Number,
+    Communication: Number,
+    CheckIn: Number,
+    Accuracy: Number,
     Location: Number,
-    value: Number
+    Value: Number
   },
   options: {
     comfortableBeds: {type: Number, default: 0},

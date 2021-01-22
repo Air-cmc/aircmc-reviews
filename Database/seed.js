@@ -6,19 +6,19 @@ const sampleRating = [
   {
     hostName: 'Elon Musk',
     starReview: {
-      one: 1,
-      two: 2,
-      three: 3,
-      four: 4,
-      five: 5
+      1: 1,
+      2: 2,
+      3: 3,
+      4: 4,
+      5: 5
     },
     starOptions: {
-      cleanliness: 4,
-      communication: 3,
-      checkIn: 2,
-      accuracy: 5,
+      Cleanliness: 4,
+      Communication: 3,
+      CheckIn: 2,
+      Accuracy: 5,
       Location: 5,
-      value: 5
+      Value: 5
     },
     options: {
       comfortableBeds: 3,
@@ -33,19 +33,19 @@ const sampleRating = [
   {
     hostName: 'Dwayne Johnson',
     starReview: {
-      one: 2,
-      two: 3,
-      three: 4,
-      four: 5,
-      five: 6
+      1: 2,
+      2: 3,
+      3: 4,
+      4: 5,
+      5: 6
     },
     starOptions: {
-      cleanliness: 4,
-      communication: 3,
-      checkIn: 2,
-      accuracy: 5,
+      Cleanliness: 4,
+      Communication: 3,
+      CheckIn: 2,
+      Accuracy: 5,
       Location: 5,
-      value: 5
+      Value: 5
     },
     options: {
       comfortableBeds: 4,
@@ -60,19 +60,19 @@ const sampleRating = [
   {
     hostName: 'Steve Schneider',
     starReview: {
-      one: 5,
-      two: 2,
-      three: 3,
-      four: 2,
-      five: 0
+      1: 5,
+      2: 2,
+      3: 3,
+      4: 2,
+      5: 0
     },
     starOptions: {
-      cleanliness: 4,
-      communication: 3,
-      checkIn: 2,
-      accuracy: 5,
+      Cleanliness: 4,
+      Communication: 3,
+      CheckIn: 2,
+      Accuracy: 5,
       Location: 5,
-      value: 5
+      Value: 5
     },
     options: {
       comfortableBeds: 0,
@@ -87,19 +87,19 @@ const sampleRating = [
   {
     hostName: 'Milly Ketchum',
     starReview: {
-      one: 1,
-      two: 1,
-      three: 2,
-      four: 2,
-      five: 5
+      1: 1,
+      2: 1,
+      3: 2,
+      4: 2,
+      5: 5
     },
     starOptions: {
-      cleanliness: 4,
-      communication: 3,
-      checkIn: 2,
-      accuracy: 5,
+      Cleanliness: 4,
+      Communication: 3,
+      CheckIn: 2,
+      Accuracy: 5,
       Location: 5,
-      value: 5
+      Value: 5
     },
     options: {
       comfortableBeds: 2,
@@ -114,19 +114,19 @@ const sampleRating = [
   {
     hostName: 'Jon Lasley',
     starReview: {
-      one: 0,
-      two: 1,
-      three: 3,
-      four: 5,
-      five: 15
+      1: 0,
+      2: 1,
+      3: 3,
+      4: 5,
+      5: 15
     },
     starOptions: {
-      cleanliness: 4,
-      communication: 3,
-      checkIn: 2,
-      accuracy: 5,
+      Cleanliness: 4,
+      Communication: 3,
+      CheckIn: 2,
+      Accuracy: 5,
       Location: 5,
-      value: 5
+      Value: 5
     },
     options: {
       comfortableBeds: 8,
@@ -141,19 +141,19 @@ const sampleRating = [
   {
     hostName: 'Amanda DeVille',
     starReview: {
-      one: 3,
-      two: 4,
-      three: 6,
-      four: 8,
-      five: 15
+      1: 3,
+      2: 4,
+      3: 6,
+      4: 8,
+      5: 15
     },
     starOptions: {
-      cleanliness: 4,
-      communication: 3,
-      checkIn: 2,
-      accuracy: 5,
+      Cleanliness: 4,
+      Communication: 3,
+      CheckIn: 2,
+      Accuracy: 5,
       Location: 5,
-      value: 5
+      Value: 5
     },
     options: {
       comfortableBeds: 3,
@@ -168,19 +168,19 @@ const sampleRating = [
   {
     hostName: 'Joe Docker',
     starReview: {
-      one: 1,
-      two: 2,
-      three: 5,
-      four: 3,
-      five: 10
+      1: 1,
+      2: 2,
+      3: 5,
+      4: 3,
+      5: 10
     },
     starOptions: {
-      cleanliness: 4,
-      communication: 3,
-      checkIn: 2,
-      accuracy: 5,
+      Cleanliness: 4,
+      Communication: 3,
+      CheckIn: 2,
+      Accuracy: 5,
       Location: 5,
-      value: 5
+      Value: 5
     },
     options: {
       comfortableBeds: 4,

@@ -2,21 +2,20 @@ import React from 'react';
 import { Row, Col } from 'react-bootstrap';
 
 
-const Options = (props) => {
-  console.log(props);
-  const option = props.options.options;
+const Options = ({ options }) => {
 
-  return (
+  const option = options ? options.options : null;
+  return option ? (
     <div>
-      <button id="button">Central Location ({option.centralLocation})</button>
-      <button id="button">Comfortable Beds ({option.comfortableBeds})</button>
-      <button id="button">Easy Check-In ({option.easyCheckIn})</button>
-      <button id="button">Great Location ({option.greatLocation})</button>
-      <button id="button">Great Restaurants ({option.greatRestaurants})</button>
-      <button id="button">Great Views ({option.greatViews})</button>
-      <button id="button">Responsive Host ({option.responsiveHost})</button>
+      <button id="opt-btn">Central Location <div id='button-num'>{option.centralLocation}</div></button>
+      <button id="opt-btn">Comfortable Beds <div id='button-num'>{option.comfortableBeds}</div></button>
+      <button id="opt-btn">Easy Check-In <div id='button-num'>{option.easyCheckIn}</div></button>
+      <button id="opt-btn">Great Location <div id='button-num'>{option.greatLocation}</div></button>
+      <button id="opt-btn">Great Restaurants <div id='button-num'>{option.greatRestaurants}</div></button>
+      <button id="opt-btn">Great Views <div id='button-num'>{option.greatViews}</div></button>
+      <button id="opt-btn">Responsive Host <div id='button-num'>{option.responsiveHost}</div></button>
     </div>
-  );
+  ) : <div>Loading...</div>;
 };
 
 export default Options;
