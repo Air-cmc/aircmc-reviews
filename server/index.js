@@ -6,13 +6,17 @@ const cors = require('cors');
 const { Review, Rating } = require('../database/Review.js');
 
 const app = express();
-const PORT = 3000;
+const PORT = 3003;
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(cors());
 
 app.use(express.static(path.join(__dirname + '/../client/dist')));
+
+app.get('/static', (req, res) => {
+  res.sendFile(path.join(__dirname, '../', 'client', 'dist', 'bundle.js'));
+});
 
 app.get('/review', (req, res) => {
   Review.find({})
