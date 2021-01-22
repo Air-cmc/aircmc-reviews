@@ -56,7 +56,7 @@ class App extends React.Component {
         <br />
         <Options options={ratings[0]}/>
         <br /><br />
-        <Review reviews={reviews} />
+        <Review reviews={reviews} ratings={ratings[0]} />
       </div>
     );
   }

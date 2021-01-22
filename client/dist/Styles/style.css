@@ -102,22 +102,35 @@ body {
 }
 
 #cat-progress-bar {
-  display: inline-block !important;
-  /* float: right; */
+  display: table;
+  position: relative;
+
+}
+
+#cat-progress-bar .progress, #rev-mdl-bars .progress {
+  height: 4px !important;
+  width: 140px;
+  position: absolute;
 }
 
 #cat-progress-bar .progress {
-  height: 4px !important;
-  width: 140px;
+  top: -2.3vw;
+  left: 25vw
 }
 
-#cat-progress-bar .progress-bar {
+#cat-progress-bar .progress-bar, #rev-mdl-bars .progress-bar {
   background-color: black;
-  display: inline-block;
+}
+
+#progress-count, #rvw-mdl-bar-rtg {
+  display: table-cell;
+  padding-left: 20px;
+  position: absolute;
 }
 
 #progress-count {
-  display: inline-block;
+  top: -3vw;
+  left: 35.5vw;
 }
 
 #button-num {
@@ -170,4 +183,32 @@ body {
 
 #show-revs-btn:hover {
   background-color: rgb(240, 240, 240)
+}
+
+.rvw-mdl .modal-content {
+  width: 400vw;
+  max-width: 400vw;
+}
+
+#rvw-mdl-close {
+  /* Make button to close modal */
+}
+
+#rvw-mdl-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+
+#rvw-mdl-bars {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+#rvw-mdl-cat {
+  margin-bottom: 5px;
+  font-size: 13px;
+}
+
+#rvw-mdl-bar-rtg {
+  display: inline-block;
 }
