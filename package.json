@@ -6,7 +6,7 @@
   "scripts": {
     "start": "nodemon server/index.js",
     "dev:react": "webpack --config ./webpack.config.js --mode development -w",
-    "db:setup": "node database/seed.js",
+    "db:setup": "node Database/seed.js",
     "test": "jest"
   },
   "repository": {
