@@ -26,7 +26,7 @@ class App extends React.Component {
   }
 
   getReviews() {
-    axios.get('/review')
+    axios.get('http://localhost:3003/review')
       .then((res) => {
         this.setState({reviews: res.data});
       })
@@ -34,7 +34,7 @@ class App extends React.Component {
   }
 
   getRatings() {
-    axios.get('/rating')
+    axios.get('http://localhost:3003/rating')
       .then((res) => {
         this.setState({ratings: res.data});
       })
@@ -56,7 +56,7 @@ class App extends React.Component {
         <br />
         <Options options={ratings[0]}/>
         <br /><br />
-        <Review reviews={reviews} />
+        <Review reviews={reviews} ratings={ratings[0]} />
       </div>
     );
   }

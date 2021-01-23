@@ -1,10 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
+import ReviewModal from './ReviewModal.jsx';
 import { Card } from 'react-bootstrap';
 import Moment from 'moment';
 
 
-const Review = ({ reviews }) => {
+const Review = ({ reviews, ratings }) => {
   console.log(reviews);
+
+  const [modal, setModal] = useState(false);
 
   return reviews ? (
     <div>
@@ -37,14 +40,14 @@ const Review = ({ reviews }) => {
               </div>
               <div id='review-body' >{review.body}</div>
               <br />
-              <br />
             </div>
           ))}
         </div>
       </div>
-      <button id='show-revs-btn' onClick={() => { /* Create modal to open up here */ }}>{`Show all ${reviews.length} reviews`}</button>
+      <button id='show-revs-btn' onClick={() => setModal(true)}>{`Show all ${reviews.length} reviews`}</button>
       <br />
       <br />
+      <ReviewModal ratings={ratings} show={modal} setModal={setModal} />
     </div>
   ) : <div>Loading...</div>;
 };
