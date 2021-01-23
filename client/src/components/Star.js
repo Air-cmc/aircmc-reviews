@@ -11,7 +11,7 @@ const SimpleRating = () => {
 
       <Box component="fieldset" mb={3} borderColor="transparent">
         <Typography component="legend">Your Rating</Typography>
-        <Rating name="pristine" value={value}
+        <Rating name='half-rating' value={value} precision={0.5}
           onChange={(event, newValue) => {
             setValue(newValue);
           }} />

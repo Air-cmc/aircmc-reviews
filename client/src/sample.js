@@ -9,12 +9,12 @@ const sample = [
       five: 5
     },
     starOptions: {
-      cleanliness: 4,
-      communication: 3,
-      checkIn: 2,
-      accuracy: 5,
+      Cleanliness: 4,
+      Communication: 3,
+      CheckIn: 2,
+      Accuracy: 5,
       Location: 5,
-      value: 5
+      Value: 5
     },
     options: {
       comfortableBeds: 3,

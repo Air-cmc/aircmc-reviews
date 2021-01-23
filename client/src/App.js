@@ -3,7 +3,8 @@ import Options from './components/Options';
 import Review from './components/Review';
 import StarReview from './components/StarReview';
 import sample from './sample';
-import SimpleRating from './components/Star';
+import Star from './components/Star';
+import Title from './components/TitleBar.jsx';
 
 const axios = require('axios');
 
@@ -14,10 +15,9 @@ class App extends React.Component {
 
     this.state = {
       sample: sample,
-      reviews: {},
-      ratings: {}
+      reviews: [],
+      ratings: []
     };
-    console.log('state', this.state);
   }
 
   componentDidMount() {
@@ -26,17 +26,14 @@ class App extends React.Component {
   }
 
   getReviews() {
-
     axios.get('/review')
       .then((res) => {
         this.setState({reviews: res.data});
-        console.log(res);
       })
       .catch(err => console.log(err));
   }
 
   getRatings() {
-
     axios.get('/rating')
       .then((res) => {
         this.setState({ratings: res.data});
@@ -46,18 +43,20 @@ class App extends React.Component {
 
 
   render () {
-
+    const { reviews, ratings } = this.state;
+    console.log('REVIEW:', reviews);
+    console.log('Ratings: ', ratings);
     return (
       <div>
-        <h1>React is running!</h1>
-        <hr></hr>
-        <SimpleRating />
-        <StarReview stars={this.state.sample[0]}/>
-        <hr></hr>
-        <Options options={this.state.sample[0]}/>
-        <hr></hr>
-        Reviews for: {this.state.sample[0].hostName}
-        <Review reviews={this.state.sample[1]} />
+        <br />
+        <hr />
+        <Title ratings={ratings[0]} />
+        <br />
+        <StarReview ratings={ratings[0]}/>
+        <br />
+        <Options options={ratings[0]}/>
+        <br /><br />
+        <Review reviews={reviews} />
       </div>
     );
   }

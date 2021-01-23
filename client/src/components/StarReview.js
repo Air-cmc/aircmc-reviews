@@ -1,28 +1,42 @@
 import React from 'react';
-import { Row, Col } from 'react-bootstrap';
+import { ProgressBar } from 'react-bootstrap';
 import StarRating from 'react-bootstrap-star-rating';
-import { Card } from 'react-bootstrap';
 
 
-const StarReview = (props) => {
-
-  const stars = props.stars.starReview;
-  console.log('star', props);
-
+const StarReview = ({ ratings }) => {
+  let categories = [];
+  let catRates = [];
+  if (ratings) {
+    categories = Object.keys(ratings.starOptions);
+    catRates = Object.values(ratings.starOptions);
+  }
   return (
     <div>
-      <span role="img" aria-label="sheep">⭐</span>
-      <Col>{'One: '}{stars.one}</Col>
-      <Col>{'Two: '}{stars.two}</Col>
-      <Col>{'Three: '}{stars.three}</Col>
-      <Col>{'Four: '}{stars.four}</Col>
-      <Col>{'Five: '}{stars.five}</Col>
-
-      <Card>
-
-      </Card>
+      <div id='reviews-grid'>
+        <div>
+          {categories.slice(0, 3).map((cat, i) => (
+            <div>
+              <div className='cat-name' key={cat}>{cat}</div>
+              <div id='cat-progress-bar'>
+                <ProgressBar now={catRates[i] * 20} />
+                <div id='progress-count' >{catRates[i]}</div>
+              </div>
+            </div>
+          ))}
+        </div>
+        <div>
+          {categories.slice(3).map((cat, i) => (
+            <div>
+              <div className='cat-name' key={cat}>{cat}</div>
+              <div id='cat-progress-bar'>
+                <ProgressBar variant='custom' now={catRates[i] * 20} />
+                <div id='progress-count' >{catRates[i]}</div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
     </div>
-
   );
 };
 
