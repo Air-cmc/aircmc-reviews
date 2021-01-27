@@ -88,7 +88,12 @@ body {
   margin-left: 5px;
   font-family: 'Airbnb Cereal App Medium';
   font-size: 20px;
-  vertical-align: 5px;
+  vertical-align: -4px;
+}
+
+#rvws-star {
+  color: red;
+  font-size: 22px;
 }
 
 #reviews-grid {
@@ -107,7 +112,7 @@ body {
 
 }
 
-#cat-progress-bar .progress, #rev-mdl-bars .progress {
+#cat-progress-bar .progress {
   height: 4px !important;
   width: 140px;
   position: absolute;
@@ -118,7 +123,7 @@ body {
   left: 25vw
 }
 
-#cat-progress-bar .progress-bar, #rev-mdl-bars .progress-bar {
+#cat-progress-bar .progress-bar, #rvw-mdl-bars .progress-bar {
   background-color: black;
 }
 
@@ -185,13 +190,26 @@ body {
   background-color: rgb(240, 240, 240)
 }
 
-.rvw-mdl .modal-content {
-  width: 400vw;
-  max-width: 400vw;
+.rvw-modal {
+  width: 85vw;
+  max-width: 85vw;
+}
+.rvw-modal .modal-content {
+  border-radius: 13px;
 }
 
-#rvw-mdl-close {
-  /* Make button to close modal */
+#rvw-mdl-close button {
+  margin-top: 10px;
+  margin-left: 10px;
+  height: 35px;
+  border: 1px solid white;
+  border-radius: 50%;
+  background-color: white;
+  outline: none;
+}
+
+#rvw-mdl-close button:hover {
+  background-color: rgb(240, 240, 240)
 }
 
 #rvw-mdl-grid {
@@ -199,16 +217,47 @@ body {
   grid-template-columns: 1fr 2fr;
 }
 
+.modal-content #rvws-star {
+  color: red;
+  font-size: 35px;
+}
+
+.modal-content #reviews-title {
+  font-size: 30px;
+  position: absolute;
+}
+
 #rvw-mdl-bars {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  padding-right: 50px;
 }
 
-#rvw-mdl-cat {
-  margin-bottom: 5px;
-  font-size: 13px;
+#rvw-mdl-cat div, #rvw-mdl-bars {
+  margin-top: 10px;
+  font-size: 15px;
+}
+
+#rvw-mdl-progress {
+  display: inline-block;
 }
 
 #rvw-mdl-bar-rtg {
-  display: inline-block;
+  margin-left: 13%;
+}
+
+#rvw-mdl-bars .progress {
+  height: 4px !important;
+  width: 140px;
+  margin-top: 26px;
+}
+
+#rvw-modal-srch {
+  top: 10%;
+  border-radius: 50px;
+}
+
+#rvw-srch-box {
+  background-color:  rgb(240, 240, 240);
+  outline: none;
 }

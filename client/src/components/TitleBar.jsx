@@ -14,7 +14,7 @@ const Title = ({ ratings }) => {
   return (
     <div>
       <br />
-      <StarIcon style={{color: 'red', fontSize: '22px'}} />
+      <StarIcon id='rvws-star'/>
       <div id='reviews-title'>
         <div>{`${average} (${total} reviews)`}</div>
       </div>

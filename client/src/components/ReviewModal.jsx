@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import { Modal, InputGroup, FormControl, ProgressBar } from 'react-bootstrap';
 import TitleBar from './TitleBar.jsx';
+import CloseIcon from '@material-ui/icons/Close';
+import SearchIcon from '@material-ui/icons/Search';
+
 
 const ReviewModal = ({ ratings, show, setModal }) => {
   const [query, setQuery] = useState('');
@@ -19,18 +22,22 @@ const ReviewModal = ({ ratings, show, setModal }) => {
         onHide={() => setModal(false)}
         centered
         animation
-        className='rvw-mdl'
+        dialogClassName='rvw-modal'
       >
+        <div id='rvw-mdl-close'>
+          <button type='button' onClick={() => setModal(false)}>
+            <CloseIcon fontSize='small' />
+          </button>
+        </div>
         <Modal.Body>
-          <div id='rvw-mdl-close'></div>
           <div id='rvw-mdl-grid'>
             <div>
               <TitleBar ratings={ratings} />
-              <div id='rev-mdl-bars'>
+              <div id='rvw-mdl-bars'>
                 <div id='rvw-mdl-cat'>
                   {categories.map(cat => <div>{cat}</div>)}
                 </div>
-                <div>
+                <div id='rvw-mdl-progress'>
                   {catRates.map(rate => (
                     <div>
                       <ProgressBar now={rate * 20}/>
@@ -43,7 +50,16 @@ const ReviewModal = ({ ratings, show, setModal }) => {
               {/* Buttons */}
             </div>
             <div>
-              <h1>Search bar</h1>
+              <InputGroup id='rvw-modal-srch'>
+                <InputGroup.Prepend>
+                  <InputGroup.Text id="srch-icon"><SearchIcon /></InputGroup.Text>
+                </InputGroup.Prepend>
+                <FormControl
+                  placeholder='Search'
+                  id='rvw-srch-box'
+                  onChange={(e) => setQuery(e.target.value)}
+                />
+              </InputGroup>
             </div>
           </div>
         </Modal.Body>
