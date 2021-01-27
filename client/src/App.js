@@ -26,7 +26,7 @@ class App extends React.Component {
   }
 
   getReviews() {
-    axios.get('http://localhost:3003/review')
+    axios.get('http://54.67.25.138:3003/review')
       .then((res) => {
         this.setState({reviews: res.data});
       })
@@ -34,7 +34,7 @@ class App extends React.Component {
   }
 
   getRatings() {
-    axios.get('http://localhost:3003/rating')
+    axios.get('http://54.67.25.138:3003/rating')
       .then((res) => {
         this.setState({ratings: res.data});
       })
