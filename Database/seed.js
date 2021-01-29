@@ -28,7 +28,8 @@ const sampleRating = [
       easyCheckIn: 1,
       greatRestaurants: 3,
       centralLocation: 5
-    }
+    },
+    id: [19, 3, 4]
   },
   {
     hostName: 'Dwayne Johnson',
@@ -55,7 +56,8 @@ const sampleRating = [
       easyCheckIn: 4,
       greatRestaurants: 6,
       centralLocation: 7
-    }
+    },
+    id: [18, 1, 2]
   },
   {
     hostName: 'Steve Schneider',
@@ -82,7 +84,8 @@ const sampleRating = [
       easyCheckIn: 0,
       greatRestaurants: 3,
       centralLocation: 1
-    }
+    },
+    id: [20]
   },
   {
     hostName: 'Milly Ketchum',
@@ -109,7 +112,8 @@ const sampleRating = [
       easyCheckIn: 3,
       greatRestaurants: 5,
       centralLocation: 1
-    }
+    },
+    id: [5, 6, 7]
   },
   {
     hostName: 'Jon Lasley',
@@ -136,7 +140,8 @@ const sampleRating = [
       easyCheckIn: 25,
       greatRestaurants: 16,
       centralLocation: 9
-    }
+    },
+    id: [14, 15, 16, 17]
   },
   {
     hostName: 'Amanda DeVille',
@@ -163,7 +168,8 @@ const sampleRating = [
       easyCheckIn: 4,
       greatRestaurants: 9,
       centralLocation: 1
-    }
+    },
+    id: [11, 12, 13]
   },
   {
     hostName: 'Joe Docker',
@@ -190,7 +196,8 @@ const sampleRating = [
       easyCheckIn: 1,
       greatRestaurants: 2,
       centralLocation: 4
-    }
+    },
+    id: [8, 9, 10]
   },
 ];
 

@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon server/index.js",
-    "dev:react": "webpack --config ./webpack.config.js --mode development -w",
+    "dev:react": "webpack --mode development -w",
+    "react-pro": "webpack --mode production",
     "db:setup": "node Database/seed.js",
     "test": "jest"
   },
@@ -45,20 +46,18 @@
     "@material-ui/core": "^4.11.2",
     "@material-ui/icons": "^4.11.2",
     "@material-ui/lab": "^4.0.0-alpha.57",
-    "angular": "^1.8.2",
     "axios": "^0.21.1",
     "bootstrap": "^3.4.1",
     "cors": "^2.8.5",
     "express": "^4.17.1",
-    "jquery": "^3.5.1",
     "mdbreact": "^5.0.1",
     "moment": "^2.29.1",
     "mongoose": "^5.11.9",
-    "mysql": "^2.18.1",
     "react": "^16.14.0",
     "react-bootstrap": "^1.4.3",
     "react-bootstrap-star-rating": "^3.5.5-alpha.0.3",
     "react-dom": "^16.14.0",
+    "react-router-dom": "^5.2.0",
     "underscore": "^1.12.0"
   },
   "babel": {
@@ -76,5 +75,12 @@
         }
       ]
     ]
-  }
+  },
+  "plugins": [
+    ["@babel/plugin-transform-runtime",
+      {
+        "regenerator": true
+      }
+    ]
+  ]
 }

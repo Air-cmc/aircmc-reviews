@@ -10,7 +10,7 @@ const ReviewModal = ({ ratings, show, setModal }) => {
 
   let categories = [];
   let catRates = [];
-  if (ratings) {
+  if (ratings.starOptions) {
     categories = Object.keys(ratings.starOptions);
     catRates = Object.values(ratings.starOptions);
   }

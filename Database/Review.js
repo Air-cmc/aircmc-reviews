@@ -29,7 +29,8 @@ const ratingSchema = new mongoose.Schema({
     easyCheckIn: {type: Number, default: 0},
     greatRestaurants: {type: Number, default: 0},
     centralLocation: {type: Number, default: 0}
-  }
+  },
+  id: [Number],
 });
 
 const reviewSchema = new mongoose.Schema({
