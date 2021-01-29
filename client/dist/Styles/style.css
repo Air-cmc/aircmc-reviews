@@ -228,11 +228,19 @@ body {
 }
 
 #rvw-modal-srch {
-  top: 10%;
-  border-radius: 50px;
+  top: 6%;
+  border: 0px solid white;
+  border-radius: 25%;
 }
 
 #rvw-srch-box {
   background-color:  rgb(240, 240, 240);
-  outline: none;
+  box-shadow: none !important;
+}
+
+#rvw-mdl-reviews {
+  margin-top: 10px;
+  padding: 60px;
+  max-height: 450px;
+  overflow: scroll;
 }

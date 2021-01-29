@@ -58,7 +58,7 @@ const Review = ({ reviews }) => {
       <button id='show-revs-btn' onClick={() => setModal(true)}>{`Show all ${reviews.length} reviews`}</button>
       <br />
       <br />
-      <ReviewModal ratings={ratings} show={modal} setModal={setModal} />
+      <ReviewModal ratings={ratings} reviews={reviews} show={modal} setModal={setModal} />
     </div>
   ) : <div>Loading...</div>;
 };

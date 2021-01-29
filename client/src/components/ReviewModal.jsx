@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import { Modal, InputGroup, FormControl, ProgressBar } from 'react-bootstrap';
+import Moment from 'moment';
 import TitleBar from './TitleBar.jsx';
 import CloseIcon from '@material-ui/icons/Close';
 import SearchIcon from '@material-ui/icons/Search';
 
 
-const ReviewModal = ({ ratings, show, setModal }) => {
+const ReviewModal = ({ ratings, reviews, show, setModal }) => {
   const [query, setQuery] = useState('');
 
   let categories = [];
@@ -14,7 +15,9 @@ const ReviewModal = ({ ratings, show, setModal }) => {
     categories = Object.keys(ratings.starOptions);
     catRates = Object.values(ratings.starOptions);
   }
-
+  const regEx = new RegExp(query, 'ig');
+  reviews = reviews.filter(({ review }) => review ? regEx.test(review.body) : true);
+  console.log(reviews);
   return (
     <div>
       <Modal
@@ -60,6 +63,22 @@ const ReviewModal = ({ ratings, show, setModal }) => {
                   onChange={(e) => setQuery(e.target.value)}
                 />
               </InputGroup>
+              <div id='rvw-mdl-reviews'>
+                {reviews.map(({ review }) => (
+                  <div>
+                    <div className='reviewer-title-bar'>
+                      <img src='https://source.unsplash.com/random/100x100/?person' alt='' />
+                      <div id='reviewer-title-info'>
+                        <div id='review-title-name' >{review.name.split(' ')[0]}</div>
+                        <div id='review-title-joined' >{Moment(new Date(review.created_at)).format('MMMM YYYY')}</div>
+                      </div>
+                    </div>
+                    <div id='review-body' >{review.body}</div>
+                    <br />
+                    <br />
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </Modal.Body>
