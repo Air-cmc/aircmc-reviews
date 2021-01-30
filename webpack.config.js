@@ -4,7 +4,7 @@ var DIST_DIR = path.join(__dirname, '/client/dist');
 module.exports = {
   entry: `${SRC_DIR}/index.jsx`, //has reactDOM.render
   output: {
-    filename: 'bundle.js',
+    filename: 'review-bundle.js',
     path: DIST_DIR//folder where index.html is
   },
   module: {
@@ -18,13 +18,6 @@ module.exports = {
             presets: [
               '@babel/preset-env',
               '@babel/preset-react'
-            ],
-            plugins: [
-              ['@babel/plugin-transform-runtime',
-                {
-                  'regenerator': true
-                }
-              ]
             ]
           }
         }

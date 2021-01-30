@@ -1,15 +1,26 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
+import axios from 'axios';
 import ReviewModal from './ReviewModal.jsx';
 import { Card } from 'react-bootstrap';
 import Moment from 'moment';
 
 
-const Review = ({ reviews, ratings }) => {
-  console.log(reviews);
-
+const Review = ({ reviews }) => {
   const [modal, setModal] = useState(false);
 
-  return reviews ? (
+  const [ratings, setRatings] = useState({});
+  const { id } = useParams();
+
+  useEffect(() => {
+    axios.get(`http://54.67.25.138:3003/rating/${id}`)
+      .then(({ data }) => {
+        setRatings(data);
+      })
+      .catch(err => console.log(err));
+  }, [id]);
+
+  return reviews !== [] ? (
     <div>
       <div id='reviews-container'>
         <div>
@@ -47,7 +58,7 @@ const Review = ({ reviews, ratings }) => {
       <button id='show-revs-btn' onClick={() => setModal(true)}>{`Show all ${reviews.length} reviews`}</button>
       <br />
       <br />
-      <ReviewModal ratings={ratings} show={modal} setModal={setModal} />
+      <ReviewModal ratings={ratings} reviews={reviews} show={modal} setModal={setModal} />
     </div>
   ) : <div>Loading...</div>;
 };

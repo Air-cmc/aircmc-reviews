@@ -14,33 +14,17 @@ app.use(cors());
 
 app.use(express.static(path.join(__dirname + '/../client/dist')));
 
-app.get('/static', (req, res) => {
-  res.sendFile(path.join(__dirname, '../', 'client', 'dist', 'bundle.js'));
-});
-
-app.get('/review', (req, res) => {
+app.get('/review/', (req, res) => {
   Review.find({})
     .then(data => res.send(data))
     .catch(err => console.log(err));
 });
 
-// app.get('/review/:host', (req, res) => {
-//   Review.find({host: req.params.host})
-//     .then(data => res.send(data))
-//     .catch(err => console.log(err));
-// });
-
-app.get('/rating/', (req, res) => {
-  Rating.find({})
+app.get('/rating/:id', (req, res) => {
+  Rating.findOne({id: req.params.id})
     .then(data => res.send(data))
     .catch(err => console.log(err));
 });
-
-// app.post('/reviews', (req, res) => {
-
-// });
-
-
 
 app.listen(PORT, () => {
   console.log(`listening on port ${PORT}`);
