@@ -4,13 +4,15 @@ import axios from 'axios';
 import { ProgressBar } from 'react-bootstrap';
 import StarRating from 'react-bootstrap-star-rating';
 
+const host = SERVICE_HOST;
+const port = SERVICE_PORT;
 
 const StarReview = () => {
   const [ratings, setRatings] = useState({});
   const { id } = useParams();
 
   useEffect(() => {
-    axios.get(`http://54.67.25.138:3003/rating/${id}`)
+    axios.get(`http://${host}:${port}/rating/${id}`)
       .then(({ data }) => {
         setRatings(data);
       })

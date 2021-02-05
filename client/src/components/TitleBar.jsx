@@ -3,12 +3,15 @@ import axios from 'axios';
 import { useParams } from 'react-router-dom';
 import StarIcon from '@material-ui/icons/Star';
 
+const host = SERVICE_HOST;
+const port = SERVICE_PORT;
+
 const Title = () => {
   const [ratings, setRatings] = useState({});
   const { id } = useParams();
 
   useEffect(() => {
-    axios.get(`http://54.67.25.138:3003/rating/${id}`)
+    axios.get(`http://${host}:${port}/rating/${id}`)
       .then(({ data }) => {
         setRatings(data);
       })

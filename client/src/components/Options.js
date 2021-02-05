@@ -3,13 +3,15 @@ import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import { Row, Col } from 'react-bootstrap';
 
+const host = SERVICE_HOST;
+const port = SERVICE_PORT;
 
 const Options = () => {
   const [options, setOptions] = useState({});
   const { id } = useParams();
 
   useEffect(() => {
-    axios.get(`http://54.67.25.138:3003/rating/${id}`)
+    axios.get(`http://${host}:${port}/rating/${id}`)
       .then(({ data }) => {
         setOptions(data);
       })

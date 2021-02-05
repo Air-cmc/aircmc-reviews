@@ -5,6 +5,8 @@ import ReviewModal from './ReviewModal.jsx';
 import { Card } from 'react-bootstrap';
 import Moment from 'moment';
 
+const host = SERVICE_HOST;
+const port = SERVICE_PORT;
 
 const Review = ({ reviews }) => {
   const [modal, setModal] = useState(false);
@@ -13,7 +15,7 @@ const Review = ({ reviews }) => {
   const { id } = useParams();
 
   useEffect(() => {
-    axios.get(`http://54.67.25.138:3003/rating/${id}`)
+    axios.get(`http://${host}:${port}/rating/${id}`)
       .then(({ data }) => {
         setRatings(data);
       })

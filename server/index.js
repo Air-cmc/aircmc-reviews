@@ -2,11 +2,12 @@ const express = require('express');
 const path = require('path');
 const bodyParser = require('body-parser');
 const cors = require('cors');
+require('dotenv').config();
 
 const { Review, Rating } = require('../Database/Review.js');
 
 const app = express();
-const PORT = 3003;
+const PORT = process.env.PORT;
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
