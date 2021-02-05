@@ -7,6 +7,9 @@ import Title from './components/TitleBar.jsx';
 
 const axios = require('axios');
 
+const host = SERVICE_HOST;
+const port = SERVICE_PORT;
+
 class App extends React.Component {
 
   constructor() {
@@ -22,7 +25,7 @@ class App extends React.Component {
   }
 
   getReviews() {
-    axios.get('http://54.67.25.138:3003/review')
+    axios.get(`http://${host}:${port}/review`)
       .then((res) => {
         this.setState({reviews: res.data});
       })
