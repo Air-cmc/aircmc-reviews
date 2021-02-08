@@ -7,7 +7,6 @@
     "start": "node server/index.js",
     "dev:react": "webpack --env=dev --mode development",
     "react-pro": "webpack --env=prod --mode production",
-    "db:setup": "node Database/seed.js",
     "test": "jest"
   },
   "repository": {
