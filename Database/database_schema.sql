@@ -2,7 +2,7 @@ DROP DATABASE IF EXISTS sdcreviews;
 
 CREATE DATABASE sdcreviews;
 
-c\ sdcreviews;
+\c sdcreviews;
 
 CREATE TABLE "ratings" (
   "id" SERIAL PRIMARY KEY,
@@ -34,3 +34,9 @@ CREATE TABLE "reviews" (
   "body" varchar(500) NOT NULL,
   "created_at" timestamp with time zone DEFAULT now()
 );
+
+CREATE INDEX listing_index_ratings on ratings(listing_id);
+CREATE INDEX listing_index_reviews on reviews(listing_id);
+
+-- COPY ratings FROM 'ratings.csv' delimiter '|';
+-- COPY reviews FROM 'reviews.csv' delimiter '|';
