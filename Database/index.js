@@ -1,10 +1,8 @@
-const mongoose = require('mongoose');
+const { Pool } = require('pg');
+const pool = new Pool();
 
-const mongoUri = process.env.MONGOURL || 'mongodb://localhost/reviews';
-mongoose.connect(mongoUri, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-  useCreateIndex: true,
-});
-const db = mongoose.connection;
-module.exports = db;
+module.exports = {
+  query: (text, params, callback) => {
+    return pool.query(text, params, callback);
+  },
+};
