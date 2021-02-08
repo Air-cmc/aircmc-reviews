@@ -1,6 +1,6 @@
 const faker = require('faker');
 
-const rating = (reviewCount = 1) => {
+const rating = (id, listingId, reviewCount = 1) => {
   let stars = [];
 
   // assign a total number of star ratings that matches reviewCount
@@ -18,6 +18,8 @@ const rating = (reviewCount = 1) => {
   const randomFromReviewCount = () => faker.random.number(reviewCount);
 
   return {
+    'id': id,
+    'listing_id': listingId,
     '1_stars': stars[0],
     '2_stars': stars[1],
     '3_stars': stars[2],
@@ -39,11 +41,13 @@ const rating = (reviewCount = 1) => {
   };
 };
 
-const review = () => {
+const review = (id, listingId) => {
   return {
+    'id': id,
+    'listing_id': listingId,
     'name': faker.name.findName(),
-    'body': faker.lorem.paragraph(faker.random.number(5)),
-    'created_at': faker.date.past(5),
+    'body': faker.lorem.paragraph(faker.random.number({min: 1, max: 3})),
+    'created_at': faker.date.past(5).toISOString(),
   };
 };
 
