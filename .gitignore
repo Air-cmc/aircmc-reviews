@@ -1,3 +1,4 @@
 node_modules
 *.env
 review-bundle.js
+Database/*.csv
