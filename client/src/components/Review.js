@@ -9,6 +9,8 @@ const host = SERVICE_HOST;
 const port = SERVICE_PORT;
 
 const Review = ({ reviews, ratings }) => {
+  const [modal, setModal] = useState(false);
+
   return reviews !== [] ? (
     <div>
       <div id='reviews-container'>

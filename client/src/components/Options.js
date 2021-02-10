@@ -7,7 +7,7 @@ const host = SERVICE_HOST;
 const port = SERVICE_PORT;
 
 const Options = ({ ratings }) => {
-  const option = options ? options.options : null;
+  const option = ratings ? ratings.options : null;
   return option ? (
     <div>
       <button id="opt-btn">Central Location <div id='button-num'>{option.centralLocation}</div></button>
