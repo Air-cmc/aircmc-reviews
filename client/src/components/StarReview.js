@@ -7,18 +7,7 @@ import StarRating from 'react-bootstrap-star-rating';
 const host = SERVICE_HOST;
 const port = SERVICE_PORT;
 
-const StarReview = () => {
-  const [ratings, setRatings] = useState({});
-  const { id } = useParams();
-
-  useEffect(() => {
-    axios.get(`http://${host}:${port}/rating/${id}`)
-      .then(({ data }) => {
-        setRatings(data);
-      })
-      .catch(err => console.log(err));
-  }, [id]);
-
+const StarReview = ({ ratings }) => {
   let categories = [];
   let catRates = [];
   if (ratings.starOptions) {

@@ -6,18 +6,7 @@ import { Row, Col } from 'react-bootstrap';
 const host = SERVICE_HOST;
 const port = SERVICE_PORT;
 
-const Options = () => {
-  const [options, setOptions] = useState({});
-  const { id } = useParams();
-
-  useEffect(() => {
-    axios.get(`http://${host}:${port}/rating/${id}`)
-      .then(({ data }) => {
-        setOptions(data);
-      })
-      .catch(err => console.log(err));
-  }, [id]);
-
+const Options = ({ ratings }) => {
   const option = options ? options.options : null;
   return option ? (
     <div>

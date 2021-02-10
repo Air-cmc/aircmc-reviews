@@ -8,20 +8,7 @@ import Moment from 'moment';
 const host = SERVICE_HOST;
 const port = SERVICE_PORT;
 
-const Review = ({ reviews }) => {
-  const [modal, setModal] = useState(false);
-
-  const [ratings, setRatings] = useState({});
-  const { id } = useParams();
-
-  useEffect(() => {
-    axios.get(`http://${host}:${port}/rating/${id}`)
-      .then(({ data }) => {
-        setRatings(data);
-      })
-      .catch(err => console.log(err));
-  }, [id]);
-
+const Review = ({ reviews, ratings }) => {
   return reviews !== [] ? (
     <div>
       <div id='reviews-container'>

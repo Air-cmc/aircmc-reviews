@@ -6,18 +6,7 @@ import StarIcon from '@material-ui/icons/Star';
 const host = SERVICE_HOST;
 const port = SERVICE_PORT;
 
-const Title = () => {
-  const [ratings, setRatings] = useState({});
-  const { id } = useParams();
-
-  useEffect(() => {
-    axios.get(`http://${host}:${port}/rating/${id}`)
-      .then(({ data }) => {
-        setRatings(data);
-      })
-      .catch(err => console.log(err));
-  }, [id]);
-
+const Title = ({ratings}) => {
   let total, average;
   if (ratings.starReview) {
     const stars = Object.values(ratings.starReview);
@@ -25,8 +14,8 @@ const Title = () => {
     average = Math.round(stars
       .map((n, i) => n * (i + 1))
       .reduce((m, i) => m += i, 0) / total * 100) / 100;
-
   }
+
   return (
     <div>
       <br />
